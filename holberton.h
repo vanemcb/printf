@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int_printf(const char *format, ...);
+int _printf(const char *format, ...);
 void p_char(va_list input_arg, int *size);
 void p_string(va_list input_arg, int *size);
 void p_int(va_list input_arg, int *size);

@@ -32,8 +32,10 @@ int _printf(const char *format, ...)
 			x = x + 1;
 		}
 		else
+		{
 			write(1, &format[x], 1);
-		(*size)++;
+			(*size)++;
+		}
 	}
 	va_end(arg);
 	return (*size);

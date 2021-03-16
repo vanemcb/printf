@@ -28,7 +28,7 @@ void p_string(va_list input_arg, int *size)
 	while (str[n] != '\0')
 		n++;
 	write(1, str, n);
-	*size = *size + n;
+	*size = *size + (n - 1);
 }
 
 /**

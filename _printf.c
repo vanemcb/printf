@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	int x, y, count = 0, *size;
-	va_list arg;
+	va_list arg, arg2;
 	ident t_selec[] = {
 		{"c", p_char},
 		{"s", p_string},
@@ -22,6 +22,11 @@ int _printf(const char *format, ...)
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(arg, format);
+	va_copy (arg2, arg);
+	for (x = 0; format[x] != '\0' && format != NULL; x++)
+		if (format[x] == '%')
+			if (va_arg(arg2, char *) == NULL)
+				return(-1);
 	for (x = 0; format[x] != '\0' && format != NULL; x++)
 	{
 		if (format[x] == '%')

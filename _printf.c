@@ -10,8 +10,6 @@ int _printf(const char *format, ...)
 {
 	int x, y, count = 0, *size;
 	va_list arg;
-
-	size = &count;
 	ident t_selec[] = {
 		{"c", p_char},
 		{"s", p_string},
@@ -19,6 +17,8 @@ int _printf(const char *format, ...)
 		{"d", p_int},
 		{NULL, NULL}
 	};
+
+	size = &count;
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(arg, format);

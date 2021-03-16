@@ -56,7 +56,7 @@ void p_int(va_list input_arg, int *size)
 			n = n % x;
 			if (num != 0)
 				no_print_zero = 1;
-			if (num < 0 && b == 1)
+			if (num < 0 && no_print_zero == 1)
 			{
 				num = -num;
 				n = -n;

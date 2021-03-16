@@ -22,11 +22,11 @@ int _printf(const char *format, ...)
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(arg, format);
-	va_copy (arg2, arg);
+	va_copy(arg2, arg);
 	for (x = 0; format[x] != '\0' && format != NULL; x++)
 		if (format[x] == '%')
 			if (va_arg(arg2, char *) == NULL)
-				return(-1);
+				return (-1);
 	for (x = 0; format[x] != '\0' && format != NULL; x++)
 	{
 		if (format[x] == '%')

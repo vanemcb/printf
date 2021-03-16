@@ -11,6 +11,7 @@ void p_char(va_list input_arg, int *size);
 void p_string(va_list input_arg, int *size);
 void p_int(va_list input_arg, int *size);
 int selec(char c_selec);
+void p_percent(va_list input_arg, int *size);
 
 /**
  *struct identifier - strutct of the formmated types and functions

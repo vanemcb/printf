@@ -32,6 +32,20 @@ void p_string(va_list input_arg, int *size)
 }
 
 /**
+ * p_percent - function that prints a percentage
+ * @input_arg: input character
+ * @size: pointer to the full string size counter
+ */
+void p_percent(va_list input_arg, int *size)
+{
+	char p = '%';
+
+	(void)input_arg;
+	write(1, &p, 1);
+	(*size)++;
+}
+
+/**
  * p_int - function that prints a number
  * @input_arg: input number
  * @size: pointer to the full string size counter

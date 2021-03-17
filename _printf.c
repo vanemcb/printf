@@ -30,6 +30,8 @@ int _printf(const char *format, ...)
 			for (y = 0; t_selec[y].s_id != NULL; y++)
 				if (t_selec[y].s_id[0] == format[x + 1])
 					t_selec[y].func(arg, size);
+			if (t_selec[y].s_id == NULL)
+				p_percent(arg, size);
 			x = x + 1;
 		}
 		else

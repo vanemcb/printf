@@ -1,0 +1,48 @@
+ .TH "_printf" "1" "2021-03-16" "v1.0" "_printf man page"
+ .SH NAME
+ _printf
+ .PP
+ .SH SYNOPSIS
+ .B #include "holberton.h"
+ .B int _printf(const char *format, ...)
+ .PP
+ .SH DESCRIPTION
+ The \fB_printf()\fP function produce output according to a \fIformat\fP as decribed below.
+ The function \fB_printf\fP write output to \fIstdout\fP, the standard output stream.
+ .PP
+ .SH CONVERSION SPECIFIER
+ A character that specifies the type of conversion to be applied. The conversion specifies and the\
+ ir meanings are:
+ .PP
+ .B d, i
+ The int is converted to decimal and each of its digits is written continuously, ignoring the zero\
+ s added to the left during the conversion.
+ .PP
+ .B s
+ The content where the char *is written.
+ .PP
+ .B c
+ The int argument is converted to a char and then the character is written.
+ .PP
+ .B %
+ A percentage is written, no input argument needed.
+ .PP
+ .SH RETURN VALUE
+ In case of successful return, the function return the number of characters printed (excluding the\
+  null byte used to end output to strings). If there is an output error, the function return a neg\
+ ative value.
+ .SH EXAMPLE
+ print the string "hello, W" followed by a new line.
+ .PP
+ #include "holberton.h"
+ .PP
+ int main()
+ {
+  _printf("%s, %c\\n", "hello", 'W');
+   return 0;
+ }
+ .PP
+ .SH AUTHORS
+ \fIWritten by Carlos Cruz, Juan Duque, Vanessa Mususué\fP
+ .SH SEE ALSO
+ man printf(3)
